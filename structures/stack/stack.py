@@ -11,10 +11,13 @@ from structures.node import Node
 # - peek
 
 
-class Stack():
-    def __init__(self) -> None:
+class Stack:
+    def __init__(self, data=None) -> None:
         self.top = None
         self._size = 0
+
+        if data:
+            self.push(data)
 
     def push(self, item) -> None:
         """

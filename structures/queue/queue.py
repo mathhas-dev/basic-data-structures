@@ -11,10 +11,13 @@ from structures.node import Node
 
 
 class Queue():
-    def __init__(self) -> None:
+    def __init__(self, data=None) -> None:
         self.first = None
         self.last = None
         self._size = 0
+
+        if data:
+            self.push(data)
 
     def push(self, item) -> None:
         """
