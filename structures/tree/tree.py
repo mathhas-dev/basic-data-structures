@@ -54,3 +54,8 @@ class BinaryTree:
             3. Visit the root.
         """
         pass
+
+
+class BinarySearchTree(BinaryTree):
+    # TODO: Implement binary search tree
+    pass
