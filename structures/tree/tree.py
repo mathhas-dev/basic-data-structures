@@ -16,22 +16,17 @@ class BinaryTree:
         Return the height of the tree
         (ends the recursion when there is no more child node)
         """
-        # If no nodes were provided, use root node.
+        # Checks if binary tree is empty
         if node is None:
-            node = self.root
-
-        h_left = 0
-        h_right = 0
+            return 0
 
         # Traversal all left nodes
-        if node.left:
-            h_left = self.height(node.left)
+        h_left = self.height(node.left)
         # Traversal all right nodes
-        if node.right:
-            h_right = self.height(node.right)
+        h_right = self.height(node.right)
 
         # Returns the biggest height
-        return max(h_left, h_right)
+        return max(h_left, h_right) + 1
 
     def preorder_traversal(self, node=None):
         """

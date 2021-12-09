@@ -100,5 +100,5 @@ if __name__ == "__main__":
     # tree.postorder_traversal()
 
     tree = height_example_tree()
-    print("Height: ", tree.height())
+    print("Height: ", tree.height(tree.root))
 
