@@ -7,4 +7,4 @@ class Node():
         return f"data: {str(self.data)}\nnext: {str(self.next.data)}"
 
     def __str__(self) -> str:
-        return self.data
+        return str(self.data)
