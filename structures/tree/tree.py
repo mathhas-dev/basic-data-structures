@@ -30,10 +30,10 @@ class BinaryTree:
 
     def preorder_traversal(self, node=None):
         """
-        Algorithm:
-            1. Visit the root.
-            2. Traverse the left subtree, call Preorder(left-subtree)
-            3. Traverse the right subtree, call Preorder(right-subtree) 
+        Algorithm
+            1. Traverse the left subtree, call Inorder(left-subtree)
+            2. Visit the root.
+            3. Traverse the right subtree, call Inorder(right-subtree)
         """
         pass
 
@@ -54,6 +54,9 @@ class BinaryTree:
             3. Visit the root.
         """
         pass
+
+    # TODO:
+    # https://www.geeksforgeeks.org/symmetric-tree-tree-which-is-mirror-image-of-itself/
 
 
 class BinarySearchTree(BinaryTree):
