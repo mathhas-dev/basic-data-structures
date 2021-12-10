@@ -30,21 +30,35 @@ class BinaryTree:
 
     def preorder_traversal(self, node=None):
         """
-        Algorithm
-            1. Traverse the left subtree, call Inorder(left-subtree)
-            2. Visit the root.
-            3. Traverse the right subtree, call Inorder(right-subtree)
-        """
-        pass
-
-    def inorder_traversal(self, node=None):
-        """
         Algorithm:
             1. Visit the root.
             2. Traverse the left subtree, call Preorder(left-subtree)
             3. Traverse the right subtree, call Preorder(right-subtree) 
         """
-        pass
+        if node is None:
+            node = self.root
+
+        print(node.data, end="")
+        if node.left:
+            self.preorder_traversal(node.left)
+        if node.right:
+            self.preorder_traversal(node.right)
+
+    def inorder_traversal(self, node=None):
+        """
+        Algorithm
+            1. Traverse the left subtree, call Inorder(left-subtree)
+            2. Visit the root.
+            3. Traverse the right subtree, call Inorder(right-subtree)
+        """
+        if node is None:
+            node = self.root
+
+        if node.left:
+            self.inorder_traversal(node.left)
+        print(node.data, end="")
+        if node.right:
+            self.inorder_traversal(node.right)
 
     def postorder_traversal(self, node=None):
         """
@@ -53,7 +67,13 @@ class BinaryTree:
             2. Traverse the right subtree, call Postorder(right-subtree)
             3. Visit the root.
         """
-        pass
+        if node is None:
+            node = self.root
+        if node.left:
+            self.postorder_traversal(node.left)
+        if node.right:
+            self.postorder_traversal(node.right)
+        print(node.data, end="")
 
     # TODO:
     # https://www.geeksforgeeks.org/symmetric-tree-tree-which-is-mirror-image-of-itself/

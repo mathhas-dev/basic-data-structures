@@ -2,7 +2,7 @@ from structures.node import BinaryNode
 from tree import BinaryTree
 
 
-def height_example_tree():
+def numbers_example_tree():
     tree = BinaryTree()
     n1 = BinaryNode(1)
     n2 = BinaryNode(2)
@@ -23,7 +23,7 @@ def height_example_tree():
     return tree
 
 
-def inorder_example_tree():
+def math_operation_example_tree():
     """
          '+'
        /     \
@@ -61,7 +61,7 @@ def inorder_example_tree():
     return tree
 
 
-def postorder_example_tree():
+def programmer_example_tree():
     tree = BinaryTree()
     n1 = BinaryNode('P')
     n2 = BinaryNode('R')
@@ -72,33 +72,49 @@ def postorder_example_tree():
     n7 = BinaryNode('M')
     n8 = BinaryNode('M')
     n9 = BinaryNode('E')
-    n0 = BinaryNode('R')
+    n10 = BinaryNode('X')
 
-    n0.left = n6
-    n0.right = n9
-    n6.left = n1
-    n6.right = n5
-    n5.left = n2
-    n5.right = n4
-    n4.right = n3
-    n9.left = n8
-    n8.right = n7
+    n1.left = n2
+    n2.left = n3
+    n3.left = n4
+    n4.right = n5
+    n5.left = n6
+    n6.right = n7
+    n1.right = n8
+    n8.right = n9
+    n9.left = n10
 
-    tree.root = n0
+    tree.root = n1
+    return tree
+
+
+def geeks_for_geeks_example_tree():
+    tree = BinaryTree()
+    n1 = BinaryNode(1)
+    n2 = BinaryNode(2)
+    n3 = BinaryNode(3)
+    n4 = BinaryNode(4)
+    n5 = BinaryNode(5)
+
+    n1.left = n2
+    n1.right = n3
+    n2.left = n4
+    n2.right = n5
+
+    tree.root = n1
     return tree
 
 
 if __name__ == "__main__":
-    # tree = inorder_example_tree()
+    tree = programmer_example_tree()
 
-    # print("In-order route:")
-    # tree.inorder_example_tree
+    print("Pre-order route:")
+    tree.preorder_traversal()
 
-    # tree = postorder_example_tree()
-    # print("Post-order route:")
+    print("\n\nIn-order route:")
+    tree.inorder_traversal()
 
-    # tree.postorder_traversal()
+    print("\n\nPost-order route:")
+    tree.postorder_traversal()
 
-    tree = height_example_tree()
-    print("Height: ", tree.height(tree.root))
-
+    print("\nHeight: ", tree.height(tree.root))
